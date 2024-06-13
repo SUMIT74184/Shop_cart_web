@@ -1,6 +1,9 @@
 // import { useState } from "react";
 
+import { useSelector } from "react-redux";
+
 const Product = ({ post }) => {
+  const { cart } = useSelector((state) => state);
   // const [selected, setSelected] = useState();
   return (
     <div>
@@ -16,7 +19,6 @@ const Product = ({ post }) => {
       <div>
         <p>{post.price}</p>
       </div>
-      <button>{true ? <p>Remove Items</p> : <p>Add to Cart</p>}</button>
     </div>
   );
 };

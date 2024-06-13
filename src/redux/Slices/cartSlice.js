@@ -10,15 +10,15 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addItem(state, action) {
+    add: () => {
       // Logic to add item to the cart
     },
-    removeItem(state, action) {
+    remove: () => {
       // Logic to remove item from the cart
     },
     // Other reducers can be added here
   },
 });
 
-export const { addItem, removeItem } = cartSlice.actions;
+export const { add, remove } = cartSlice.actions;
 export default cartSlice.reducer;
