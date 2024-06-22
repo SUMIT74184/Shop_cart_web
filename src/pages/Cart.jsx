@@ -8,8 +8,8 @@ const Cart = () => {
   const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
-    setTotalAmount(cart.reduce((acc, curr) => acc + curr.price, 0));
-  }, [cart]);
+    setTotalAmount(cart.reduce((acc, curr) => acc + curr.price,0));
+  }, [cart]);//whenver there is changes in then pnly it will changes
   return (
     <div>
       {cart.length > 0 ? (

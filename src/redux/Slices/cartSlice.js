@@ -10,13 +10,13 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    add: () => {
-      // Logic to add item to the cart
+    add: (state,action) => {
+      state.push(action.payload);
     },
-    remove: () => {
-      // Logic to remove item from the cart
+    remove: (state,action) => {
+      return state.filter((item)=>item.id!==action.payload);
     },
-    // Other reducers can be added here
+    
   },
 });
 
